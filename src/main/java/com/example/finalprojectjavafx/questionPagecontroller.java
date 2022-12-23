@@ -68,29 +68,33 @@ public class questionPagecontroller implements Initializable {
         String ans3 = null;
 
         RadioButton selected1 = (RadioButton) q1G.getSelectedToggle();
-        ans1 = selected1.getText();
-
         RadioButton selected2 = (RadioButton) q2G.getSelectedToggle();
-        ans2 = selected2.getText();
-
         RadioButton selected3 = (RadioButton) q3G.getSelectedToggle();
-        ans3 = selected3.getText();
-
-        Connection con = jdbcConnection.getConnection();
-        Statement statement = con.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM javafx.disease where symptom1 = '" + ans1 + "' AND symptom2 = '" + ans2 + "' AND symptom3 = '" + ans3 + "' ;");
-        dataSingleton dataSingleton = new dataSingleton();
-        if(resultSet.next() == false){
-            JOptionPane.showMessageDialog(null, "We don't have enough information on this disease\n wait for the next update <3");
+       if(selected1 == null || selected2 == null || selected3 == null){
+           JOptionPane.showMessageDialog(null, "Please answer all the questions");
         }
         else{
+           ans1 = selected1.getText();
+           ans2 = selected2.getText();
+           ans3 = selected3.getText();
+            Connection con = jdbcConnection.getConnection();
+            Statement statement = con.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM javafx.disease where symptom1 = '" + ans1 + "' AND symptom2 = '" + ans2 + "' AND symptom3 = '" + ans3 + "' ;");
+            dataSingleton dataSingleton = new dataSingleton();
 
-            dataSingleton.setData(resultSet.getString(5));
-            System.out.println(dataSingleton.getData());
-            page p = new page();
-            p.Page(event, "lastpage.fxml");
+            if(resultSet.next() == false){
+                JOptionPane.showMessageDialog(null, "We don't have enough information on this disease\n wait for the next update <3");
+            }
+            else{
 
+                dataSingleton.setData(resultSet.getString(5));
+                System.out.println(dataSingleton.getData());
+                page p = new page();
+                p.Page(event, "lastpage.fxml");
+
+            }
         }
+
     }
 
     public void Back(ActionEvent event) throws IOException {
