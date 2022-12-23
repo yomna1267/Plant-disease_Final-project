@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojectjavafx.questionPagecontroller">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" opacity="0.82" pickOnBounds="true">
+         <effect>
+            <DropShadow />
+         </effect>
+         <image>
+            <Image url="@background2.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="q1" layoutX="120.0" layoutY="109.0" prefHeight="34.0" prefWidth="498.0" text="Quiestion 1 ??" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <RadioButton fx:id="r1" layoutX="136.0" layoutY="167.0" mnemonicParsing="false" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="q1G" />
+         </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <RadioButton fx:id="r2" layoutX="136.0" layoutY="203.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="738.0" text="RadioButton" toggleGroup="$q1G">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <Label fx:id="q2" layoutX="120.0" layoutY="247.0" prefHeight="34.0" prefWidth="511.0" text="Quiestion 2 ??" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <RadioButton fx:id="r3" layoutX="136.0" layoutY="300.0" mnemonicParsing="false" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="q2G" />
+         </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <RadioButton fx:id="r4" layoutX="136.0" layoutY="333.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$q2G">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <Label fx:id="q3" layoutX="120.0" layoutY="383.0" prefHeight="34.0" prefWidth="712.0" text="Quiestion 2 ??">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font></Label>
+      <RadioButton fx:id="r5" layoutX="136.0" layoutY="427.0" mnemonicParsing="false" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="q3G" />
+         </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <RadioButton fx:id="r6" layoutX="136.0" layoutY="461.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$q3G">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <Label layoutX="375.0" layoutY="39.0" prefHeight="45.0" prefWidth="150.0" text="Questions" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginBtn" layoutX="409.0" layoutY="514.0" mnemonicParsing="false" onAction="#Submit" opacity="0.82" prefHeight="27.0" prefWidth="83.0" text="SUBMIT" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#Back" prefHeight="36.0" prefWidth="73.0" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</Pane>

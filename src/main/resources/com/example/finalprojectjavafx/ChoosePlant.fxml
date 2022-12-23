@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojectjavafx.choosePlantController">
+   <children>
+      <ImageView fitHeight="216.0" fitWidth="224.0" layoutX="160.0" layoutY="25.0" pickOnBounds="true">
+         <image>
+            <Image url="@1.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="227.0" layoutY="252.0" mnemonicParsing="false" onAction="#Cotton" prefHeight="41.0" prefWidth="90.0" text="Cotton" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="227.0" layoutY="538.0" mnemonicParsing="false" onAction="#Corn" prefHeight="41.0" prefWidth="90.0" text="Corn" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="608.0" layoutY="252.0" mnemonicParsing="false" onAction="#Potato" prefHeight="41.0" prefWidth="90.0" text="Potato" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="608.0" layoutY="538.0" mnemonicParsing="false" onAction="#Tomato" prefHeight="41.0" prefWidth="90.0" text="Tomato" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink layoutX="14.0" layoutY="18.0" onAction="#Back" prefHeight="36.0" prefWidth="69.0" text="Back" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="216.0" fitWidth="230.0" layoutX="532.0" layoutY="25.0" pickOnBounds="true">
+         <image>
+            <Image url="@3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="216.0" fitWidth="230.0" layoutX="157.0" layoutY="309.0" pickOnBounds="true">
+         <image>
+            <Image url="@2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="226.0" fitWidth="230.0" layoutX="538.0" layoutY="304.0" pickOnBounds="true">
+         <image>
+            <Image url="@4.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</Pane>

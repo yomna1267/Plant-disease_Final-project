@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojectjavafx.loginController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow />
+         </effect>
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="25.0" prefHeight="117.0" prefWidth="420.0" text=" LOGIN" textFill="#485a04" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="58.0" />
+         </font>
+      </Label>
+      <Label layoutX="277.0" layoutY="186.0" prefHeight="34.0" prefWidth="109.0" text="Username" textFill="#3e4811">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="268.0" prefHeight="27.0" prefWidth="102.0" text="Password" textFill="#3e4811">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField id="username" fx:id="usernameText" layoutX="408.0" layoutY="186.0" opacity="0.8" prefHeight="34.0" prefWidth="204.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="loginBtn" layoutX="391.0" layoutY="359.0" mnemonicParsing="false" onAction="#login" opacity="0.82" prefHeight="27.0" prefWidth="83.0" text="LOGIN" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="362.0" layoutY="402.0" prefHeight="20.0" prefWidth="161.0" text="Don't have an account? ">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="signupLink" layoutX="402.0" layoutY="429.0" onAction="#goToRegister" text="Sign up" textFill="#485a04">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="14.0" layoutY="14.0" onAction="#Back" prefHeight="36.0" prefWidth="74.0" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Hyperlink>
+      <PasswordField id="username" fx:id="passwordText" layoutX="408.0" layoutY="265.0" opacity="0.8" prefHeight="34.0" prefWidth="204.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </PasswordField>
+   </children>
+</Pane>
