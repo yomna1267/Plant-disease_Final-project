@@ -13,7 +13,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.TreeMap;
 
 public class questionPagecontroller implements Initializable {
     @FXML
@@ -66,25 +68,50 @@ public class questionPagecontroller implements Initializable {
        if(selected1 == null || selected2 == null || selected3 == null){
            JOptionPane.showMessageDialog(null, "Please answer all the questions");
         }
-        else{
-           ans1 = selected1.getText();
-           ans2 = selected2.getText();
-           ans3 = selected3.getText();
+       else{
+            ans1 = selected1.getText();
+            ans2 = selected2.getText();
+            ans3 = selected3.getText();
             Connection con = jdbcConnection.getConnection();
             Statement statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM javafx.disease where symptom1 = '" + ans1 + "' AND symptom2 = '" + ans2 + "' AND symptom3 = '" + ans3 + "' ;");
+            ResultSet resultSet1 = statement.executeQuery("SELECT * FROM javafx.disease where symptom1 = '" + ans1 + "' ;");
+            resultSet1.next();
+            ans1 = resultSet1.getString(5);
+            ResultSet resultSet2 = statement.executeQuery("SELECT * FROM javafx.disease where symptom2 = '" + ans2 + "' ;");
+            resultSet2.next();
+            ans2 = resultSet2.getString(5);
+            ResultSet resultSet3 = statement.executeQuery("SELECT * FROM javafx.disease where symptom3 = '" + ans3 + "' ;");
+            resultSet3.next();
+            ans3 = resultSet3.getString(5);
+            Map<String, Integer> map = new TreeMap<>();
+            map.put(ans1, 1);
+            if(map.containsKey(ans2)){
+                map.put(ans2, map.get(ans2)+1);
+            }
+            else{
+                map.put(ans2, 1);
+            }
+            if(map.containsKey(ans3)){
+                map.put(ans3, map.get(ans3)+1);
+            }
+            else{
+                map.put(ans3, 1);
+            }
+            String disease = null;
+            for(Map.Entry<String, Integer> mp : map.entrySet()){
+                if(mp.getValue() > 1){
+                    disease = mp.getKey();
+                }
+            }
             dataSingleton dataSingleton = new dataSingleton();
-
-            if(resultSet.next() == false){
+            if(disease == null){
                 JOptionPane.showMessageDialog(null, "We don't have enough information on this disease\n wait for the next update <3");
             }
             else{
-
-                dataSingleton.setData(resultSet.getString(5));
+                dataSingleton.setData(disease);
                 System.out.println(dataSingleton.getData());
                 page p = new page();
                 p.Page(event, "lastpage.fxml");
-
             }
         }
 

@@ -17,7 +17,7 @@
             <Image url="@background2.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="119.0" layoutY="29.0" prefHeight="53.0" prefWidth="249.0" text="Disease name " textFill="#232d12">
+      <Label layoutX="119.0" layoutY="29.0" prefHeight="53.0" prefWidth="249.0" text="Disease name: " textFill="#232d12">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -30,9 +30,9 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="119.0" layoutY="163.0" text="Description of the disease" textFill="#232d12">
+      <Label layoutX="119.0" layoutY="163.0" text="How to control the disease:" textFill="#232d12">
          <font>
-            <Font name="Arial Rounded MT Bold" size="27.0" />
+            <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
          <effect>
             <Glow />
