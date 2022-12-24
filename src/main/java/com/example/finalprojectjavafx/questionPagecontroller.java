@@ -104,15 +104,11 @@ public class questionPagecontroller implements Initializable {
                 }
             }
             dataSingleton dataSingleton = new dataSingleton();
-            if(disease == null){
-                JOptionPane.showMessageDialog(null, "We don't have enough information on this disease\n wait for the next update <3");
-            }
-            else{
-                dataSingleton.setData(disease);
-                System.out.println(dataSingleton.getData());
-                page p = new page();
-                p.Page(event, "lastpage.fxml");
-            }
+            dataSingleton.setData(disease);
+            System.out.println(dataSingleton.getData());
+            page p = new page();
+            p.Page(event, "lastpage.fxml");
+
         }
 
     }
