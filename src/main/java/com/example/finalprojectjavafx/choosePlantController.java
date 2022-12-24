@@ -17,8 +17,8 @@ public class choosePlantController implements Initializable {
 
     public void Cotton(ActionEvent event) throws IOException {
 
-        dataSingleton dataSingleton = new dataSingleton();
-        dataSingleton.setData("cotton");
+        dataSingleton obj = dataSingleton.getInstance();
+        obj.setData("cotton");
         page p = new page();
         p.Page(event, "QuestionsPage.fxml");
 
@@ -26,24 +26,24 @@ public class choosePlantController implements Initializable {
 
     public void Potato(ActionEvent event) throws IOException {
 
-        dataSingleton dataSingleton = new dataSingleton();
-        dataSingleton.setData("potato");
+        dataSingleton obj = dataSingleton.getInstance();
+        obj.setData("potato");
         page p = new page();
         p.Page(event, "QuestionsPage.fxml");
     }
 
     public void Corn(ActionEvent event) throws IOException {
 
-        dataSingleton dataSingleton = new dataSingleton();
-        dataSingleton.setData("corn");
+        dataSingleton obj = dataSingleton.getInstance();
+        obj.setData("corn");
         page p = new page();
         p.Page(event, "QuestionsPage.fxml");
     }
 
     public void Tomato(ActionEvent event) throws IOException {
 
-        dataSingleton dataSingleton = new dataSingleton();
-        dataSingleton.setData("tomato");
+        dataSingleton obj = dataSingleton.getInstance();
+        obj.setData("tomato");
         page p = new page();
         p.Page(event, "QuestionsPage.fxml");
     }

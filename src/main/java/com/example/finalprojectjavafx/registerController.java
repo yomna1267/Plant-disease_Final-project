@@ -43,24 +43,28 @@ public class registerController implements Initializable {
         boolean isValidInputs = Validation.Register(username, email, password);
 
         if(isValidInputs == true) {
-            Connection con = jdbcConnection.getConnection();
-            Statement statement = con.createStatement();
-            boolean UserIsFound = userIsFound(username);
-            if (UserIsFound) {
+            if(Validation.emailValidation(email) == true){
+                Connection con = jdbcConnection.getConnection();
+                Statement statement = con.createStatement();
+                boolean UserIsFound = userIsFound(username);
+                if (UserIsFound) {
 
-                statement.executeUpdate("INSERT INTO javafx.login (username, password, email) VALUES ('"+username+"', '"+password+"', '"+email+"');");
-                JOptionPane.showMessageDialog(null, "Congratulations, your account has been created");
-                page p = new page();
-                p.Page(event, "ChoosePlant.fxml");
+                    statement.executeUpdate("INSERT INTO javafx.login (username, password, email) VALUES ('"+username+"', '"+password+"', '"+email+"');");
+                    JOptionPane.showMessageDialog(null, "Congratulations, your account has been created");
+                    page p = new page();
+                    p.Page(event, "ChoosePlant.fxml");
 
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "username is already used");
+                }
             }
-            else {
-                JOptionPane.showMessageDialog(null, "username is already used");
+            else{
+                JOptionPane.showMessageDialog(null, "Please enter a valid email address");
             }
-
         }
         else {
-            JOptionPane.showMessageDialog(null, "Please Enter all required data!");
+            JOptionPane.showMessageDialog(null, "Please enter all required data!");
 
         }
 

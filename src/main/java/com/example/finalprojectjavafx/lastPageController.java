@@ -37,12 +37,12 @@ public class lastPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dataSingleton dataSingleton = new dataSingleton();
+        dataSingleton obj = dataSingleton.getInstance();
         Connection con = jdbcConnection.getConnection();
         Statement statement = null;
         try {
             statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM javafx.disease where disease_name = '" + dataSingleton.getData() + "';");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM javafx.disease where disease_name = '" + obj.getData() + "';");
             while (resultSet.next()){
                 diseaseName.setText(resultSet.getString(5));
                 answer.setText(resultSet.getString(6));

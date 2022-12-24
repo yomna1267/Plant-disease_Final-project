@@ -103,9 +103,9 @@ public class questionPagecontroller implements Initializable {
                     disease = mp.getKey();
                 }
             }
-            dataSingleton dataSingleton = new dataSingleton();
-            dataSingleton.setData(disease);
-            System.out.println(dataSingleton.getData());
+            dataSingleton obj = dataSingleton.getInstance();
+            obj.setData(disease);
+            System.out.println(obj.getData());
             page p = new page();
             p.Page(event, "lastpage.fxml");
 
@@ -123,8 +123,8 @@ public class questionPagecontroller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        dataSingleton dataSingleton = new dataSingleton();
-        String plantName = dataSingleton.getData();
+        dataSingleton obj = dataSingleton.getInstance();
+        String plantName = obj.getData();
         System.out.println(plantName);
         Connection con = jdbcConnection.getConnection();
         try {
