@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.setTitle("Garden Guardian");
         stage.setResizable(false);
-        stage.getIcons().add(new Image("C:\\Users\\mo\\IdeaProjects\\finalProject-JavaFX\\src\\main\\resources\\com\\example\\finalprojectjavafx\\plant.png"));
+        stage.getIcons().add(new Image("C:\\Users\\mo\\Documents\\GitHub\\Plant-disease_Final-project\\src\\main\\resources\\com\\example\\finalprojectjavafx\\plant.png"));
         stage.show();
 
     }
