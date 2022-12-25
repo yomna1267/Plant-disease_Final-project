@@ -28,51 +28,42 @@ public class loginController implements Initializable {
         String Username = usernameText.getText();
         String Password = passwordText.getText();
         boolean isValidInputs = Validation.Login(Username, Password);
-        if (isValidInputs == true) {
-
-            try {
-                Connection con = jdbcConnection.getConnection();
-                Statement statement = con.createStatement();
-                ResultSet resultSet = statement.executeQuery("SELECT * FROM javafx.login where username = '" + Username + "';");
-
-                String pass = null;
-
-                if(resultSet.next() == false){
-                    resultSet = statement.executeQuery("SELECT * FROM javafx.login where email = '" + Username + "';");
-                    System.out.println("Check email");
-                    if(resultSet.next() == false){
-                        JOptionPane.showMessageDialog(null,"The username or password is incorrect");
-                    }
-                    else {
-                        System.out.println("Correct email");
-                        pass = resultSet.getString(3);
-                        if (Password.equals(pass)) {
-                            page p = new page();
-                            p.Page(event, "ChoosePlant.fxml");
-
-                        }
-                        else {
-                            JOptionPane.showMessageDialog(null,"The username or password is incorrect");
-                        }
-                    }
-                }
-                else{
-                    pass = resultSet.getString(3);
-
-                    if (Password.equals(pass)) {
-                        page p = new page();
-                        p.Page(event, "ChoosePlant.fxml");
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null,"The username or password is incorrect");
-                    }
-                }
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
+        if (!isValidInputs) {
+            JOptionPane.showMessageDialog(null, "Please Enter all required data");
+            return;
         }
-        else{
-                JOptionPane.showMessageDialog(null, "Please Enter all required data");
+
+        try {
+            Connection con = jdbcConnection.getConnection();
+            Statement statement = con.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM javafx.login where username = '" + Username + "';");
+            String pass = null;
+
+            if(!resultSet.next()){
+                resultSet = statement.executeQuery("SELECT * FROM javafx.login where email = '" + Username + "';");
+                if(!resultSet.next()){
+                    JOptionPane.showMessageDialog(null,"The username or password is incorrect");
+                    return;
+                }
+                else {
+                    pass = resultSet.getString(3);
+                }
+            }
+            else{
+                pass = resultSet.getString(3);
+            }
+
+
+            if (Password.equals(pass)) {
+                page p = new page();
+                p.Page(event, "ChoosePlant.fxml");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"The username or password is incorrect");
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
 
     }

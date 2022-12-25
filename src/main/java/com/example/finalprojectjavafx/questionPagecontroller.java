@@ -67,6 +67,7 @@ public class questionPagecontroller implements Initializable {
         RadioButton selected3 = (RadioButton) q3G.getSelectedToggle();
        if(selected1 == null || selected2 == null || selected3 == null){
            JOptionPane.showMessageDialog(null, "Please answer all the questions");
+           return;
         }
        else{
             ans1 = selected1.getText();

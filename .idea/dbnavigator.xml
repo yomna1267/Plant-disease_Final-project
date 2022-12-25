@@ -40,6 +40,7 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="6947ae4d-0e7e-4078-b0d4-861e96afe07c" dataset="javafx.disease" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="6947ae4d-0e7e-4078-b0d4-861e96afe07c" dataset="javafx.login" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

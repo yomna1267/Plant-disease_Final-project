@@ -48,35 +48,31 @@ public class registerController implements Initializable {
 
         boolean isValidInputs = Validation.Register(username, email, password);
 
-        if(isValidInputs == true) {
-            if(Validation.emailValidation(email) == true){
-                Connection con = jdbcConnection.getConnection();
-                Statement statement = con.createStatement();
-                boolean UserIsFound = userIsFound(username);
-                boolean EmailIsFound = EmailIsFound(email);
-                if (UserIsFound) {
-                    if(EmailIsFound){
-                        statement.executeUpdate("INSERT INTO javafx.login (username, password, email) VALUES ('"+username+"', '"+password+"', '"+email+"');");
-                        JOptionPane.showMessageDialog(null, "Congratulations, your account has been created");
-                        page p = new page();
-                        p.Page(event, "ChoosePlant.fxml");
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null, "There is already an account associated with this email");
-                    }
-                }
-                else {
-                    JOptionPane.showMessageDialog(null, "Uername is already used");
-                }
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "Please enter a valid email address");
-            }
-        }
-        else {
+        if(!isValidInputs) {
             JOptionPane.showMessageDialog(null, "Please enter all required data!");
-
+            return;
         }
+
+        if(!Validation.emailValidation(email)) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid email address");
+            return;
+        }
+        Connection con = jdbcConnection.getConnection();
+        Statement statement = con.createStatement();
+        boolean UserIsFound = userIsFound(username);
+        boolean EmailIsFound = EmailIsFound(email);
+        if (!UserIsFound) {
+            JOptionPane.showMessageDialog(null, "Uername is already used");
+            return;
+        }
+        if(!EmailIsFound){
+            JOptionPane.showMessageDialog(null, "There is already an account associated with this email");
+            return;
+        }
+        statement.executeUpdate("INSERT INTO javafx.login (username, password, email) VALUES ('"+username+"', '"+password+"', '"+email+"');");
+        JOptionPane.showMessageDialog(null, "Congratulations, your account has been created");
+        page p = new page();
+        p.Page(event, "ChoosePlant.fxml");
 
 
     }
