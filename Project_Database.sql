@@ -10,6 +10,8 @@ USE `javafx`;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
@@ -58,7 +60,7 @@ CREATE TABLE `login` (
   PRIMARY KEY (`idlogin`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +69,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'yomna','123','yomna@gmail.com'),(2,'youssef','456','youssef@gmail.com'),(3,'basmala','102','basmala@gmail.com'),(4,'ahmed','55','kkk'),(5,'nancy','123','nancy@gmail.com'),(6,'yomnaa','444','aaaaaa'),(7,'ahmedd','555','ahmed@gmail.com'),(8,'yomna11','123','yomna11@gmail.com'),(9,'ana','magdy','yomnaa');
+INSERT INTO `login` VALUES (1,'yomna1','123','yomna@gmail.com');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,6 +187,7 @@ LOCK TABLES `question3` WRITE;
 INSERT INTO `question3` VALUES (1,'Is there anything else that characterizes the disease?','Wounds located on stems and leaves.','Dark brown color on the inner tissue of the stem.'),(2,'If there’s any change stem and branches, what is it ?','The branches are about to fall off.','Black lesions on stem and branches.'),(3,'Is there anything else?','Inside the fruit is brown.','Outside the fruit is brown.'),(4,'What happens after symptoms appear on the fruit?','The lesions start out as small brown spots.','The fruit may be exposed to sunstroke.');
 /*!40000 ALTER TABLE `question3` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
@@ -194,4 +197,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-23 19:33:15
+-- Dump completed on 2022-12-25  0:13:03
