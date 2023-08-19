@@ -1,6 +1,6 @@
 # Plant Disease Detection Project
 
-![Project Logo](logo.png) <!-- Replace with your project logo if available -->
+![Project Logo]([logo.png](https://github.com/yousofkortam/Plant-disease_Final-project/blob/main/src/main/resources/com/example/finalprojectjavafx/plant.png)) <!-- Replace with your project logo if available -->
 
 Welcome to the Plant Disease Detection project repository! This project is a Java-based solution for detecting plant diseases. Users can register, log in, select a plant, answer questions about symptoms, and receive information about the detected disease along with advice for management.
 
