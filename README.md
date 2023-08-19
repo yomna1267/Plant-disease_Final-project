@@ -12,7 +12,6 @@ Welcome to the Plant Disease Detection project repository! This project is a Jav
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
