@@ -42,12 +42,13 @@ Plant diseases can significantly impact crop yield and quality. Early detection 
     javac *.java
     ```
 
-3. Run the main Java application:
+3. Add JDBC driver .jar file to your project.
+4. Run MySQL on your machine and create the data you want as the above pictures.
+5. 3. Run the main Java application:
 
     ```bash
     java HelloApplication
     ```
-
 ## Usage
 
 1. Register an account or log in if you already have one.
@@ -61,6 +62,25 @@ Plant diseases can significantly impact crop yield and quality. Early detection 
 - **SQL:** The database system for storing user information and disease data.
 
 ## Contributing
+## Meet the Contributors
+
+<!-- Contributor 1 -->
+<div align="center">
+  <a href="[Linkedin](https://www.linkedin.com/in/yousofkortam)">
+    <img src="[link-to-github-profile-avatar](https://github.com/account)" alt="Contributor 1" width="100">
+  </a>
+  <br>
+  <a href="[Github](https://github.com/yousofkortam)">Yousef Kortam</a>
+</div>
+
+<!-- Contributor 2 -->
+<div align="center">
+  <a href="link-to-linkedin-profile">
+    <img src="link-to-github-profile-avatar" alt="Contributor 2" width="100">
+  </a>
+  <br>
+  <a href="link-to-github-profile">Yomna Magdy</a>
+</div>
 
 Contributions to this project are welcome! If you would like to contribute, please follow these steps:
 
