@@ -43,7 +43,7 @@ Plant diseases can significantly impact crop yield and quality. Early detection 
     ```
 
 3. Add JDBC driver .jar file to your project.
-4. Run MySQL on your machine and create the data you want as the above pictures.
+4. Run MySQL on your machine and create the data you want as the given SQL file.
 5. 3. Run the main Java application:
 
     ```bash
